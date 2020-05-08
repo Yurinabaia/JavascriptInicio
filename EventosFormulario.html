@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<header>
+		<meta charset="utf-8">
+		<title>Eventos Formularios</title>
+		<script type="text/javascript">
+		 	//onfoucus acionar quando um elemento receber um foco do curso apenas e acionado quando é clickado
+		 	//onblur acionar quando um elemento perde o foco do curso
+		 	//onchange acionar quando o estado do elemento é modificado essa função é utilizada na tag <select>
+
+		</script><!--Tudo que estive escrito aqui vai ser lido pelo browser sobre JS-->
+		<!--É importante utilizar o JS antes do body executar o JS antes de carregar os dados de html e css-->
+	</header>
+	<body >
+		<input type="text" name="valor" placeholder="Eventos onfoucus" onfocus="alert('O Eventos onfocus foi acionado')" onblur="alert('O Eventos onblur mostra que perdeu o foco')">
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<select onchange="alert('O Evento onchange foi iniciado no select')">
+			<option>Primeira opção</option>
+			<option>Segunda opção</option>
+		</select>
+	</body>
+</html>

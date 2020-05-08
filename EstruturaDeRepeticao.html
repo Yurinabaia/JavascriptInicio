@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<header>
+		<meta charset="utf-8">
+		<title>Aula 1</title>
+		<script type="text/javascript">
+		 	var valor = 15;
+		 	var valor2 = 0;
+		 	while(valor != 0) 
+		 	{
+		 		document.write("Valor = " + valor + "<br>");
+		 		valor--;
+		 	}
+		 	document.write("<br>");
+		 	for (var i = 0; i <= 15; i++)
+		 	{
+		 		document.write("Valor = " + i + "<br>");
+		 	}
+		 	document.write("<br>");
+		 	while(valor2 <= 15) 
+		 	{
+		 		valor2++;
+		 		if(valor2 == 6) 
+		 		{
+		 			continue;//Continue passa do loop, e não printa a condição que entrou no if e nem os valores abaixo do if
+		 		}
+		 		document.write(valor2 + "<br>");
+		 	}
+		 	document.write("Do While</br>");
+		 	valor2 = 0;
+		 	var sair = " ";
+		 	do 
+		 	{
+		 		valor2++;
+		 		if(valor2 == 15) 
+		 		{
+		 			sair = "Sair";
+		 		}
+		 		document.write(valor2 + "<br>");
+		 	}while(sair != "Sair");
+		</script><!--Tudo que estive escrito aqui vai ser lido pelo browser sobre JS-->
+		<!--É importante utilizar o JS antes do body executar o JS antes de carregar os dados de html e css-->
+	</header>
+	<body>
+		
+	</body>
+</html>

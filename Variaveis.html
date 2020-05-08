@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<header>
+		<meta charset="utf-8">
+		<title>Aula 1</title>
+		<script type="text/javascript">
+			//String
+		 	var test = "Olá ";
+
+		 	//int 
+		 	var num = 10;
+
+		 	//double
+		 	var numa = 10.5
+
+		 	//bolean
+		 	var truefalse = true;
+
+		 	//Printado o valor de variaveis
+
+		 	//alert(num);
+		 	//document.write(num);
+		 	console.log(num);//Printa no console do browser
+
+		 	//Criando a cocatenação em Javascript
+		 	//var test2 = prompt("Digite o seu nome");//Aqui seria o Console.ReadLine(); entrada de dados
+		 	//document.write(test + test2); //Concatenando duas strings
+
+
+		 	//Array
+		 	//var ListaDeArray = Array("Banana", "Pera", "Maça", "Uva");
+		 	var ListaDeArray = ["Banana", "Pera", "Maça", "Uva"];
+		   // var ListaDeArray = Array();
+		   /*
+		 	ListaDeArray[0] = "Banana";
+		 	ListaDeArray[1] = "Uva";
+		 	ListaDeArray[2] = "Maça";
+		 	ListaDeArray[3] = "Abacaxi";*/
+		 	document.write(ListaDeArray[2] + "</br>" );
+
+
+			//Array Multidimensional
+			var ListaDeArray= Array();
+			ListaDeArray['Frutas'] = Array("Banana", "Pera", "Maça", "Uva", "Laranja", "Goiaba");
+			/*
+			ListaDeArray['Frutas'][0]= "Banana";
+			ListaDeArray['Frutas'][1]= "Pera";
+			ListaDeArray['Frutas'][2]= "Maça";
+			ListaDeArray['Frutas'][3]= "Uva";
+			ListaDeArray['Frutas'][4]= "Laranja";
+			ListaDeArray['Frutas'][5]= "Goiaba";*/
+			document.write(ListaDeArray['Frutas'][3] + "</br>");
+
+			ListaDeArray['Pessoas'] = Array("José","Carlos", "Airlanda", "Brenda");
+			/*
+			ListaDeArray['Pessoas'][0]= "José";
+			ListaDeArray['Pessoas'][1]= "Carlos";
+			ListaDeArray['Pessoas'][2]= "Airlanda";
+			ListaDeArray['Pessoas'][3]= "Brenda"; */
+			document.write(ListaDeArray['Pessoas'][2]);
+		</script><!--Tudo que estive escrito aqui vai ser lido pelo browser sobre JS-->
+		<!--É importante utilizar o JS antes do body executar o JS antes de carregar os dados de html e css-->
+	</header>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Calculadora</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<script type="text/javascript">
+			function valorA () 
+			{
+				var calcular = document.getElementById('operacao').value;
+				var valor1 = document.getElementById('Number1').value;
+				var valor2 = document.getElementById('Number2').value;
+				var Resultados = 0.0;
+
+				if(valor1 == '' || valor1 == null || valor2 == '' || valor2 == null) 
+				{
+					alert('Erro prencher os valores');
+					return false;
+				}
+
+
+
+				if(calcular == 1) 
+				{
+					Resultados = valor1 - valor2;
+				}
+				 else if (calcular == 2) 
+				{
+					Resultados = parseFloat(valor1) + parseFloat(valor2);
+				}
+				else if(calcular ==3) 
+				{
+					Resultados = valor1 * valor2;
+				}
+				else if(calcular == 4)
+				{
+					Resultados = valor1 / valor2;
+				}
+				else 
+				{
+					alert('operação invalida');
+					return false;
+				}
+			document.getElementById('Result').value = Resultados;
+
+
+			}
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div class="container">
+			<div class="jumbotron">
+				<h1>CALCULADORA</h1>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-4">
+					<input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control" placeholder="Digite um número" id="Number1"  />
+				</div>
+
+				<div   class="col-md-4">
+					<select id="operacao" class="form-control" onchange="valorA()">
+						<option value="">--Selecione uma operação</option>
+						<option value="1">Subtração</option>
+						<option value="2">Adição</option>
+						<option value="3">Multiplicação</option>
+						<option value="4">Divisão</option>
+					</select>
+				</div>
+
+				<div class="col-md-4">
+					<input type="text"  onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control" placeholder="Digite um número" id="Number2" />
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-4"></div>
+
+				<div class="col-md-4"></div>
+
+				<div class="col-md-4">
+					<button type="button" class="btn btn-lg btn-primary pull-right" onclick="valorA()" > Calcular</button>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="well">
+				Resultado: <input type="text" class="form-control" readonly id="Result" />
+			</div>
+		</div>
+	</body>
+</html>

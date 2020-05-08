@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<header>
+		<meta charset="utf-8">
+		<title>Eventos Mouse</title>
+		<script type="text/javascript">
+		 	//Onclick --> Evento de um click do usuario pelo maouse;
+		 	//ondblclick --> Evento de dois click do usuario pelo mouse;
+	//onmousedown --> Evento de parecido com Onclick porém se vc arrasta a caixa div ainda vai entra no evento
+		 	//onmouseover --> Não precisar de clicka na div apenas arrasta o mouse sobre ela
+		 //onmouseout ---> é o inverso do onmouseout, se arrasta o moause sobre a div e depois sair ele dispara
+		 	function onclickTeste () 
+		 	{
+		 		alert('Testando o onclick, um click do mouse');
+		 	}
+		 	function ondblclickTeste () 
+		 	{
+		 		alert('Testando o ondblclick, dois click do mouse');
+		 	}
+		 	function onmousedownTeste () 
+		 	{
+		 		alert('Testando o onmousedown, um click do mouse e arrastando a div');
+		 	}
+			function onmouseoverTeste () 
+		 	{
+		 		alert('Testando o onmouseover, arrastando o maouse na div');
+		 	}
+		 	function onmouseoutTeste () 
+		 	{
+		 		alert('Testando o onmouseout, arrastando o maouse na div e depois sair com maouse da div');
+		 	}
+
+		</script><!--Tudo que estive escrito aqui vai ser lido pelo browser sobre JS-->
+		<!--É importante utilizar o JS antes do body executar o JS antes de carregar os dados de html e css-->
+	</header>
+	<body>
+		<!--nÃO É APENAS A DIV QUE RECEBER EVENTOS, TODOS OS ELEMENTOS DO HTML RECEBER EVENTOS-->
+		<div onclick="onclickTeste()" style="background: #cccccc; height: 150px; width: 150px;">
+		</div>
+	    </br>
+		<div ondblclick="ondblclickTeste()" style="background: #cccccc; height: 150px; width: 150px;">
+		</div>
+		</br>
+		<div onmousedown="onmousedownTeste()" style="background: #cccccc; height: 150px; width: 150px;">
+		</div>
+		</br>
+		<div onmouseover="onmouseoverTeste()" style="background: #cccccc; height: 150px; width: 150px;">
+		</div>
+		</br>
+		<div onmouseout="onmouseoutTeste()" style="background: #cccccc; height: 150px; width: 150px;">
+		</div>
+	</body>
+</html>

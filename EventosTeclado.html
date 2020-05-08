@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<header>
+		<meta charset="utf-8">
+		<title>Eventos Teclado</title>
+		<script type="text/javascript">
+		 	//onkeydown -->A entrada de dados no teclado esse evento é acionado
+	//onkeypress --> O mesmo que o evento onkeydown apenas não vai capturar as teclas alt ctl esq shift e tab;
+		//onkeyup --> Parecido com onkeydown, Ele acionado quando o usuario dispara alguma teclar, tipo aaaaaaaaaaaaaa ou  bbbbbbbb etc não vai acionar de uma vez.
+
+		</script><!--Tudo que estive escrito aqui vai ser lido pelo browser sobre JS-->
+		<!--É importante utilizar o JS antes do body executar o JS antes de carregar os dados de html e css-->
+	</header>
+	<body>
+		<!--nÃO É APENAS A DIV QUE RECEBER EVENTOS, TODOS OS ELEMENTOS DO HTML RECEBER EVENTOS-->
+		<input type="text" name="valor" placeholder="Evento onkeydown" onkeydown="alert('Evento onkeydown inicializado')">
+		<input type="text" name="valor" placeholder="Evento onkeypress" onkeypress="alert('Evento onkeypress inicializado')">
+		<input type="text" name="valor" placeholder="Evento onkeyup" onkeyup="alert('Evento onkeyup inicializado')">
+	</body>
+</html>

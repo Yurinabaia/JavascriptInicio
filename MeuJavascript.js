@@ -1,0 +1,1 @@
+alert('Esse é um teste de JS a partir de um arquivo externo');
