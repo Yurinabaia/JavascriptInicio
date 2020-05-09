@@ -18,7 +18,7 @@ function jogoInciado()
 	}
 	document.getElementById('Cronometro').innerHTML = tempoSegundos;
 	//alert(tempoSegundos);
-	var qtdBaloes = 40;
+	var qtdBaloes = 80;
 
 	document.getElementById('quantidadeBaloes').innerHTML = qtdBaloes;
 	document.getElementById('quantidadeBaloesEstourados').innerHTML = 0;
@@ -32,6 +32,7 @@ function CronometroFuncao(segundos)
 	{
 		gamerOuver();
 		clearTimeout(timeout);//Para a função
+		window.location.href="index.html";
 		return false;
 	}
 	document.getElementById('Cronometro').innerHTML = segundos;
@@ -56,17 +57,25 @@ function criarBaloes(qtd)
 function estourar(e) 
 {
 	var idBalao = e.id;
+
+	var audio = new Audio('explode.mp3');
+audio.addEventListener('canplaythrough', function() {
+  audio.play();
+});
+
 	document.getElementById(idBalao).setAttribute("onclick","");
 	document.getElementById(idBalao).src = "imagens/balao_azul_pequeno_estourado.png";
 	acaoEstourar();
 }
+
 function acaoEstourar() 
 {
+
 	var balaoInteiro = document.getElementById('quantidadeBaloes').innerHTML;
 	var balaoEstourado = document.getElementById('quantidadeBaloesEstourados').innerHTML;
 	balaoInteiro = parseInt(balaoInteiro);
 	balaoEstourado = parseInt(balaoEstourado);
-
+	
 	balaoInteiro--;
 	balaoEstourado++;
 	if(balaoInteiro < 1) 
